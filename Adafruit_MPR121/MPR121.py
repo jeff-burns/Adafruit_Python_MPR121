@@ -148,7 +148,7 @@ class MPR121(object):
     def set_thresholds(self, touch, release):
         """Set the touch and release threshold for all inputs to the provided
         values.  Both touch and release should be a value between 0 to 255
-        (inclusive).
+        (inclusive). try raising the range of the touch's lower number to decrease sensitivity.
         """
         assert touch >= 0 and touch <= 255, 'touch must be between 0-255 (inclusive)'
         assert release >= 0 and release <= 255, 'release must be between 0-255 (inclusive)'
